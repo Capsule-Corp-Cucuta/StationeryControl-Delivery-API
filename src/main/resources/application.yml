@@ -40,3 +40,13 @@ eureka:
       defaultZone: http://localhost:8081/eureka/
   instance:
     instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+
+#Feign configuration
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 12000
+        readTimeout: 12000
+        loggerLevel: basic

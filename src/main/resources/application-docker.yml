@@ -4,7 +4,7 @@ info:
 
 #Port - If 0 get random port
 server:
-  port: 8084
+  port: 8085
 
 #Application Name
 spring:
@@ -40,3 +40,13 @@ eureka:
       defaultZone: http://discovery-service:8081/eureka/
   instance:
     instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+
+#Feign configuration
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 12000
+        readTimeout: 12000
+        loggerLevel: basic

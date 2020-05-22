@@ -1,6 +1,7 @@
 package co.gov.ids.stationerycontrol.delivery;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
@@ -11,6 +12,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @version 0.0.1
  * @since 2020
  */
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
 public class App {
