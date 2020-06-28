@@ -12,7 +12,8 @@ import co.gov.ids.stationerycontrol.delivery.framework.persistence.entities.Deli
  */
 public final class DeliveryMapper {
 
-    private DeliveryMapper() {}
+    private DeliveryMapper() {
+    }
 
     /**
      * Function to map Entity to Domain.

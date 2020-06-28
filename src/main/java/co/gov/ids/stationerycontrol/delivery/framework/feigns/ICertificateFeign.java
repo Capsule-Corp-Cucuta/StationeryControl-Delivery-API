@@ -25,7 +25,7 @@ public interface ICertificateFeign {
      */
     @GetMapping("/api/certificate/between/{startNumber}-{endNumber}")
     ResponseEntity findByNumberBetween(@PathVariable("startNumber") int startNumber,
-                                              @PathVariable("endNumber") int endNumber);
+                                       @PathVariable("endNumber") int endNumber);
 
     /**
      * Function to update the attendant and state of certificates between two numbers.
@@ -37,7 +37,7 @@ public interface ICertificateFeign {
      */
     @PutMapping("/api/certificate/multiple/{startNumber}-{endNumber}/attendant/{attendant}")
     ResponseEntity updateMultipleCertificates(@PathVariable("startNumber") int startNumber,
-                                                     @PathVariable("endNumber") int endNumber,
-                                                     @PathVariable("attendant") String attendant);
+                                              @PathVariable("endNumber") int endNumber,
+                                              @PathVariable("attendant") String attendant);
 
 }

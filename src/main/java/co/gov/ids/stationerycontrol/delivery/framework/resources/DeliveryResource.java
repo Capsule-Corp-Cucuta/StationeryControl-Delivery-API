@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiResponses;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import co.gov.ids.stationerycontrol.delivery.domain.Delivery;
 import co.gov.ids.stationerycontrol.delivery.domain.DeliveryType;
 import co.gov.ids.stationerycontrol.delivery.framework.feigns.ICertificateFeign;
@@ -94,7 +95,7 @@ public class DeliveryResource {
      * @param page number of page to list.
      * @param date date of deliveries to search.
      * @return List fo deliveries by a date, code 200.
-     * @throws ParseException
+     * @throws ParseException parse date exception
      */
     @GetMapping("/date/{page}")
     @ApiOperation(value = "Get deliveries by a date", notes = "Service for get a list of deliveries by a date")
@@ -113,7 +114,7 @@ public class DeliveryResource {
      * @param startDate date to start to find.
      * @param endDate   date to end to find.
      * @return List of deliveries between two dates, code 200.
-     * @throws ParseException
+     * @throws ParseException parse date exception
      */
     @GetMapping("/between-dates/{page}")
     @ApiOperation(value = "Get deliveries between two dates",

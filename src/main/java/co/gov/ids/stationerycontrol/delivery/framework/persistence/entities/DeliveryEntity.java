@@ -3,6 +3,7 @@ package co.gov.ids.stationerycontrol.delivery.framework.persistence.entities;
 import lombok.Data;
 import java.util.Date;
 import javax.persistence.*;
+
 import co.gov.ids.stationerycontrol.delivery.domain.DeliveryType;
 
 /**
