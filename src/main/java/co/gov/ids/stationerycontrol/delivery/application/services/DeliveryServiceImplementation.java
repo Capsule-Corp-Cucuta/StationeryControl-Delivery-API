@@ -11,9 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 import co.gov.ids.stationerycontrol.delivery.domain.DeliveryType;
 import co.gov.ids.stationerycontrol.delivery.application.exceptions.NotFoundException;
 import co.gov.ids.stationerycontrol.delivery.application.exceptions.BadRequestException;
-import co.gov.ids.stationerycontrol.delivery.framework.persistence.mapper.DeliveryMapper;
-import co.gov.ids.stationerycontrol.delivery.framework.persistence.entities.DeliveryEntity;
-import co.gov.ids.stationerycontrol.delivery.framework.persistence.repositories.IDeliveryRepository;
+import co.gov.ids.stationerycontrol.delivery.infraestructure.persistence.mapper.DeliveryMapper;
+import co.gov.ids.stationerycontrol.delivery.infraestructure.persistence.entities.DeliveryEntity;
+import co.gov.ids.stationerycontrol.delivery.infraestructure.persistence.repositories.IDeliveryRepository;
 
 /**
  * Class that implements IDeliveryService.
