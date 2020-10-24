@@ -5,13 +5,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-/**
- * Spring-Boot Application to manage deliveries for stationery control of live births and deaths.
- *
- * @author Sergio Rodriguez
- * @version 0.0.1
- * @since 2020
- */
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
