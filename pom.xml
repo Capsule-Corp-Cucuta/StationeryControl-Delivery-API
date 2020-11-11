@@ -9,7 +9,7 @@
     <version>1.0.0</version>
     <name>stationery-control-delivery-api</name>
     <description>Spring Boot REST Service</description>
-s
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
