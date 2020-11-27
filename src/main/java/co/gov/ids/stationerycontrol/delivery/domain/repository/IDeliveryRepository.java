@@ -24,4 +24,6 @@ public interface IDeliveryRepository {
 
     Optional<List<Delivery>> findBySenderOrReceiver(String user, int page);
 
+    long countDeliveries();
+
 }

@@ -49,4 +49,8 @@ public class DeliveryService {
     public Optional<List<Delivery>> findBySenderOrReceiver(String user, int page) {
         return repository.findBySenderOrReceiver(user, page);
     }
+
+    public long countDeliveries() {
+        return repository.countDeliveries();
+    }
 }

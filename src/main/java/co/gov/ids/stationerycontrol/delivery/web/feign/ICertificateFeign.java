@@ -14,8 +14,8 @@ public interface ICertificateFeign {
                                        @PathVariable("endNumber") int endNumber);
 
     @PutMapping("/api/certificate/multiple/{startNumber}-{endNumber}/attendant/{attendant}")
-    ResponseEntity updateMultipleCertificates(@PathVariable("startNumber") int startNumber,
-                                              @PathVariable("endNumber") int endNumber,
-                                              @PathVariable("attendant") String attendant);
+    ResponseEntity updateMultiple(@PathVariable("startNumber") int startNumber,
+                                  @PathVariable("endNumber") int endNumber,
+                                  @PathVariable("attendant") String attendant);
 
 }

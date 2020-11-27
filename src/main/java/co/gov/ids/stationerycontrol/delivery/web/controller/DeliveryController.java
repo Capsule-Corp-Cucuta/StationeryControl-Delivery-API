@@ -3,11 +3,8 @@ package co.gov.ids.stationerycontrol.delivery.web.controller;
 import java.util.List;
 import java.time.LocalDate;
 import java.text.ParseException;
-
 import io.swagger.annotations.Api;
-
 import java.time.format.DateTimeFormatter;
-
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -42,7 +39,7 @@ public class DeliveryController {
         ResponseEntity certificatesResponse = certificateFeign.findByNumberBetween(delivery.getFirstCertificate(),
                 delivery.getLastCertificate());
         if (certificatesResponse.getStatusCodeValue() == 200) {
-            certificateFeign.updateMultipleCertificates(delivery.getFirstCertificate(),
+            certificateFeign.updateMultiple(delivery.getFirstCertificate(),
                     delivery.getLastCertificate(),
                     delivery.getReceiver());
             return new ResponseEntity<>(service.create(delivery), HttpStatus.CREATED);
@@ -151,6 +148,13 @@ public class DeliveryController {
         return service.findBySenderOrReceiver(user, page)
                 .map(deliveries -> new ResponseEntity<>(deliveries, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @GetMapping("/count")
+    @ApiOperation(value = "Get count", notes = "Service for get how many deliveries was be registered.")
+    @ApiResponse(code = 200, message = "OK")
+    public ResponseEntity<Long> count() {
+        return new ResponseEntity<>(service.countDeliveries(), HttpStatus.OK);
     }
 
 }

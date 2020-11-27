@@ -66,4 +66,9 @@ public class DeliveryRepository implements IDeliveryRepository {
         return repository.findBySenderOrReceiver(user, user, PageRequest.of(page, SIZE_PAGE))
                 .map(entities -> mapper.toDeliveries(entities.getContent()));
     }
+
+    @Override
+    public long countDeliveries() {
+        return repository.count();
+    }
 }
