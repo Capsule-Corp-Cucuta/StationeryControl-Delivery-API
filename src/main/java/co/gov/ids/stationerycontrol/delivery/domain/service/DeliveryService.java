@@ -53,4 +53,8 @@ public class DeliveryService {
     public long countDeliveries() {
         return repository.countDeliveries();
     }
+
+    public long countDeliveriesBySenderOrReceiver(String user) {
+        return repository.countDeliveriesBySenderOrReceiver(user);
+    }
 }

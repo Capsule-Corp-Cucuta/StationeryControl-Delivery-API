@@ -3,8 +3,11 @@ package co.gov.ids.stationerycontrol.delivery.web.controller;
 import java.util.List;
 import java.time.LocalDate;
 import java.text.ParseException;
+
 import io.swagger.annotations.Api;
+
 import java.time.format.DateTimeFormatter;
+
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -155,6 +158,13 @@ public class DeliveryController {
     @ApiResponse(code = 200, message = "OK")
     public ResponseEntity<Long> count() {
         return new ResponseEntity<>(service.countDeliveries(), HttpStatus.OK);
+    }
+
+    @GetMapping("/count/user/{user}")
+    @ApiOperation(value = "Get count by user", notes = "Service for get how many deliveries by user was be registered.")
+    @ApiResponse(code = 200, message = "OK")
+    public ResponseEntity<Long> count(@PathVariable("user") String user) {
+        return new ResponseEntity<>(service.countDeliveriesBySenderOrReceiver(user), HttpStatus.OK);
     }
 
 }

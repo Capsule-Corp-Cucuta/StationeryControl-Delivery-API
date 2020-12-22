@@ -71,4 +71,9 @@ public class DeliveryRepository implements IDeliveryRepository {
     public long countDeliveries() {
         return repository.count();
     }
+
+    @Override
+    public long countDeliveriesBySenderOrReceiver(String user) {
+        return repository.countDeliveriesBySenderOrReceiver(user, user);
+    }
 }

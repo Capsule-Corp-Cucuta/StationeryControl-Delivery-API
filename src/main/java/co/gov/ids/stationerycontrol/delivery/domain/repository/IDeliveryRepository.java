@@ -26,4 +26,6 @@ public interface IDeliveryRepository {
 
     long countDeliveries();
 
+    long countDeliveriesBySenderOrReceiver(String user);
+
 }

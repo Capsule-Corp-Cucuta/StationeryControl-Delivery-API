@@ -21,4 +21,6 @@ public interface IDeliveryJPARepository extends PagingAndSortingRepository<Deliv
 
     Optional<Page<DeliveryEntity>> findBySenderOrReceiver(String sender, String receiver, Pageable page);
 
+    long countDeliveriesBySenderOrReceiver(String sender, String receiver);
+
 }
