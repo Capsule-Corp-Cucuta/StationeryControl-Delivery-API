@@ -1,17 +1,4 @@
-#Component Info 
-info:
-  component: stationerycontrol-delivery-api
-
-#Port - If 0 get random port
-server:
-  port: 8084
-
-#Application Name
 spring:
-  application:
-    name: stationerycontrol-delivery-api
-  profiles:
-    active: prod
   datasource:
     url: jdbc:h2:file:~/stationerycontrol-delivery
     driver-class-name: org.h2.Driver
@@ -26,12 +13,7 @@ spring:
   h2:
     console.enabled: false
     console.path: /h2
-  servlet:
-    multipart:
-      max-file-size: 100MB
-      max-request-size: 100MB
 
-#Eureka Instance ID
 eureka:
   client:
     registerWithEureka: true
@@ -40,3 +22,4 @@ eureka:
       defaultZone: http://discovery-service:8081/eureka/
   instance:
     instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
